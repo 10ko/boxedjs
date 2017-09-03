@@ -1,7 +1,7 @@
 # boxedjs
 Yet another templating engine.
 
-##Why?  
+### Why?
 While working on my personal website, which is just static HTML and CSS, I realised I would need some very basic templating system.
 I didn't want to clutter the project with too powerful or overly-complicated engines, just to repeat my footer and header in all the pages of the website.
 
@@ -10,11 +10,13 @@ So I wrote this.
 **NOTE:** This is intended as an *experiment* and nothing more.
 
 
-##Install  
+### Install
 
-`npm install -g boxedjs`
+```
+npm install -g boxedjs
+```
 
-##Project structure  
+### Project structure
 The script needs to be run in the root folder of the project and it expects the following project structure:
 ```
 /
@@ -27,7 +29,7 @@ where the content of the folders is the following:
 - `pages`: contains the pages of your website
 - `templates`: contains the templates used inside the `pages`
 
-##How to use the templates in a page  
+### How to use the templates in a page
 Whenever you want to use one of the `templates` in one of the `pages` you can require them like the following:
 ```html
 <!DOCTYPE html>
@@ -47,7 +49,7 @@ Whenever you want to use one of the `templates` in one of the `pages` you can re
 
 ```
 
-##Export  
+### Export
 Once you finished writing your HTML, you can just run:
 ```bash
 cd root_of_project
@@ -57,7 +59,7 @@ The website will be exported in the `dist/` folder.
 
 You can find more in the example/ folder
 
-##TODO:  
-- [] Init project script
-- [] Configuration file for handling different folder structure
-- [] ...
+### TODO:
+- create-new-project script
+- Configuration file for handling different folder structure
+- ...
