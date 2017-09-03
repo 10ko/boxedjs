@@ -60,6 +60,7 @@ The website will be exported in the `dist/` folder.
 You can find more in the example/ folder
 
 ### TODO:
+- Add example folder
 - create-new-project script
 - Configuration file for handling different folder structure
 - ...
