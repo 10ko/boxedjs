@@ -1,6 +1,6 @@
 {
   "name": "boxedjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Yet another static html templating engine",
   "main": "index.js",
   "bin": "index.js",
