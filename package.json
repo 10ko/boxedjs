@@ -1,0 +1,24 @@
+{
+  "name": "boxedjs",
+  "version": "0.0.1",
+  "description": "Yet another static html templating engine",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "compile": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/10ko/boxedjs.git"
+  },
+  "author": "Emanuele Libralato - 10ko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/10ko/boxedjs/issues"
+  },
+  "homepage": "https://github.com/10ko/boxedjs#readme",
+  "dependencies": {
+    "fs-extra": "^4.0.1"
+  }
+}
