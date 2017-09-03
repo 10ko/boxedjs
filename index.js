@@ -43,7 +43,6 @@ main = () => {
     });
   });
 
-
   if (fs.pathExistsSync('assets')) {
     console.log('-- Copying asset folder');
     fs.copySync('assets', 'dist');
