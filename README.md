@@ -53,11 +53,13 @@ Whenever you want to use one of the `templates` in one of the `pages` you can re
 Once you finished writing your HTML, you can just run:
 ```bash
 cd root_of_project
-boxedjs
+boxed
 ```
 The website will be exported in the `dist/` folder.
 
-You can find more in the example/ folder
+### Watch
+You can run boxedjs specifying the option `-w` or `--watch`.
+This will watch the full folder and will build a new version whenever there is a new change.
 
 ### TODO:
 - Add example folder
