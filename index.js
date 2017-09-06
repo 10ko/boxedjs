@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 const fs = require('fs-extra');
+const watch = require('node-watch');
+const program = require('commander');
 
 main = () => {
   let pages = {};
@@ -52,4 +54,17 @@ main = () => {
   console.log('Finished! You can find your website in the dist/ folder.');
 }
 
-main();
+program
+  .version('0.1.1')
+  .option('-w, --watch', 'Watch functionality. It will rebuild the website whenever a file changes.')
+  .parse(process.argv);
+
+if (program.watch) {
+  watch('.', { recursive: true, filter: name => !/node_modules/.test(name) && !/dist/.test(name) }, (evt, name) => {
+    console.log('%s changed.', name);
+    main();
+  });
+} else {
+  main();
+}
+
