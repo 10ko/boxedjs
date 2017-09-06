@@ -1,13 +1,12 @@
 {
   "name": "boxedjs",
   "version": "0.2.1",
-  "description": "Yet another static html templating engine",
+  "description": "A simple static HTML templating engine.",
   "main": "index.js",
   "bin": {
     "boxed": "./index.js"
   },
   "scripts": {
-    "watch": "nodemon index.js",
     "compile": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +19,15 @@
   "bugs": {
     "url": "https://github.com/10ko/boxedjs/issues"
   },
+  "keywords": [
+    "static",
+    "template",
+    "templating",
+    "engine",
+    "html",
+    "simple",
+    "boxed"
+  ],
   "homepage": "https://github.com/10ko/boxedjs#readme",
   "dependencies": {
     "commander": "^2.11.0",

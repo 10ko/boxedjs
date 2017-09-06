@@ -1,5 +1,5 @@
 # boxedjs
-Yet another templating engine.
+A simple static HTML templating engine.
 
 ### Why?
 While working on my personal website, which is just static HTML and CSS, I realised I would need some very basic templating system.
