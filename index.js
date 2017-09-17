@@ -1,70 +1,29 @@
 #!/usr/bin/env node
 
-const fs = require('fs-extra');
 const watch = require('node-watch');
 const program = require('commander');
+const boxed = require('./lib/boxed');
+const { isFileValidForWatch } = require('./lib/utils');
+const packagejson = require('./package.json');
 
-main = () => {
-  let pages = {};
-  let templates = {};
-  console.log('Welcome to boxedjs.');
-
-  console.log('-- Removing old dist/ folder');
-  fs.removeSync('dist');
-  fs.mkdir('dist');
-
-  console.log('-- Loading pages...');
-  fs.readdirSync('./pages')
-    .filter((item) => {
-      return item.indexOf('.html') > -1;
-    }).forEach((item) => {
-      const itemKey = item.substring(0, item.length - 5);
-      pages[itemKey] = fs.readFileSync(`./pages/${item}`, 'utf8');
-    });
-
-  console.log('-- Loading templates...');
-  fs.readdirSync('./templates')
-    .filter((item) => {
-      return item.indexOf('.html') > -1;
-    }).forEach((item) => {
-      const itemKey = item.substring(0, item.length - 5);
-      templates[itemKey] = fs.readFileSync(`./templates/${item}`, 'utf8');
-    });
-
-  console.log('-- Generating Pages...');
-  Object.keys(pages).forEach((pageKey) => {
-    let templatedPage = pages[pageKey];
-    Object.keys(templates).forEach((templateKey) => {
-      templatedPage = templatedPage.replace(`[[${templateKey}]]`, templates[templateKey])
-    });
-    fs.writeFile(`dist/${pageKey}.html`, templatedPage, (err) => {
-      if(err) {
-        console.log(err);
-        process.exit()
-      }
-    });
-  });
-
-  if (fs.pathExistsSync('assets')) {
-    console.log('-- Copying asset folder');
-    fs.copySync('assets', 'dist');
-  }
-
-  console.log();
-  console.log('Finished! You can find your website in the dist/ folder.');
-}
 
 program
-  .version('0.1.1')
+  .version(packagejson.version)
   .option('-w, --watch', 'Watch functionality. It will rebuild the website whenever a file changes.')
+  .option('-n, --new <name>', 'Create new project')
   .parse(process.argv);
 
-if (program.watch) {
-  watch('.', { recursive: true, filter: name => !/node_modules/.test(name) && !/dist/.test(name) }, (evt, name) => {
-    console.log('%s changed.', name);
-    main();
-  });
-} else {
-  main();
+
+if (program.new) {
+  boxed.createNewProject(program.new);
+  process.exit(0);
 }
 
+if (program.watch) {
+  watch('.', { recursive: true, filter: isFileValidForWatch }, (evt, name) => {
+    console.log('%s changed.', name);
+    boxed.compile();
+  });
+} else {
+  boxed.compile();
+}
