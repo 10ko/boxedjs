@@ -9,7 +9,7 @@
   "scripts": {
     "compile": "node index.js",
     "lint": "esw -w **/*.js index.js --ignore-pattern node_modules/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha lib/**/*.test.js --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
   "devDependencies": {
     "eslint": "^4.7.0",
     "eslint-config-google": "^0.9.1",
-    "eslint-watch": "^3.1.2"
+    "eslint-watch": "^3.1.2",
+    "mocha": "^3.5.3"
   }
 }
