@@ -1,5 +1,5 @@
 # boxedjs
-Yet another templating engine.
+A simple static HTML templating engine.
 
 ### Why?
 While working on my personal website, which is just static HTML and CSS, I realised I would need some very basic templating system.
@@ -15,6 +15,17 @@ So I wrote this.
 ```
 npm install -g boxedjs
 ```
+
+### Create a new project
+You can run either of the following:
+```bash
+boxed -n project-name
+boxed --new project-name
+```
+in the folder where you want to start a new project.
+
+This will create a new project called "project-name" in the current directory, containing a basic template and the right folder structure.
+
 
 ### Project structure
 The script needs to be run in the root folder of the project and it expects the following project structure:
@@ -53,11 +64,14 @@ Whenever you want to use one of the `templates` in one of the `pages` you can re
 Once you finished writing your HTML, you can just run:
 ```bash
 cd root_of_project
-boxedjs
+boxed
 ```
 The website will be exported in the `dist/` folder.
 
-You can find more in the example/ folder
+### Watch
+You can run boxedjs specifying the option `-w` or `--watch`.
+This will watch the full folder and will build a new version whenever there is a new change.
+
 
 ### TODO:
 - Add example folder
