@@ -1,6 +1,11 @@
 # boxedjs
 A simple static HTML templating engine.
 
+
+[![npm Package](https://img.shields.io/npm/v/boxedjs.svg?style=flat-square)](https://www.npmjs.org/package/boxedjs)
+[![Travis](https://img.shields.io/travis/10ko/boxedjs.svg?style=flat-square)]() [![downloads per month](http://img.shields.io/npm/dm/boxedjs.svg?style=flat-square)](https://www.npmjs.org/package/boxedjs)
+
+
 ### Why?
 While working on my personal website, which is just static HTML and CSS, I realised I would need some very basic templating system.
 I didn't want to clutter the project with too powerful or overly-complicated engines, just to repeat my footer and header in all the pages of the website.
