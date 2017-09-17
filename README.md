@@ -71,10 +71,3 @@ The website will be exported in the `dist/` folder.
 ### Watch
 You can run boxedjs specifying the option `-w` or `--watch`.
 This will watch the full folder and will build a new version whenever there is a new change.
-
-
-### TODO:
-- Add example folder
-- create-new-project script
-- Configuration file for handling different folder structure
-- ...
