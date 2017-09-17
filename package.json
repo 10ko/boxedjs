@@ -1,6 +1,6 @@
 {
   "name": "boxedjs",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A simple static HTML templating engine.",
   "main": "index.js",
   "bin": {
@@ -8,6 +8,7 @@
   },
   "scripts": {
     "compile": "node index.js",
+    "lint": "esw -w **/*.js index.js --ignore-pattern node_modules/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,5 +34,10 @@
     "commander": "^2.11.0",
     "fs-extra": "^4.0.1",
     "node-watch": "^0.5.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.7.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-watch": "^3.1.2"
   }
 }
