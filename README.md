@@ -16,6 +16,17 @@ So I wrote this.
 npm install -g boxedjs
 ```
 
+### Create a new project
+You can run either of the following:
+```bash
+boxed -n project-name
+boxed --new project-name
+```
+in the folder where you want to start a new project.
+
+This will create a new project called "project-name" in the current directory, containing a basic template and the right folder structure.
+
+
 ### Project structure
 The script needs to be run in the root folder of the project and it expects the following project structure:
 ```
@@ -60,6 +71,7 @@ The website will be exported in the `dist/` folder.
 ### Watch
 You can run boxedjs specifying the option `-w` or `--watch`.
 This will watch the full folder and will build a new version whenever there is a new change.
+
 
 ### TODO:
 - Add example folder
