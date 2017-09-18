@@ -1,9 +1,9 @@
 {
   "name": "Untitled project",
   "folders": {
-    "pages": "pages",
-    "templates": "templates",
-    "assets": "assets",
+    "pages": "src/pages",
+    "templates": "src/templates",
+    "assets": "src/assets",
     "dist": "dist"
   }
 }
