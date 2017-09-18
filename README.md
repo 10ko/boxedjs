@@ -36,14 +36,33 @@ This will create a new project called "project-name" in the current directory, c
 The script needs to be run in the root folder of the project and it expects the following project structure:
 ```
 /
-├── assets/
-├── pages/
-├── templates/
+├── src/
+    ├── assets/
+    ├── pages/
+    ├── templates/
+├── .boxedrc
 ```
 where the content of the folders is the following:
-- `assets`: contains all the styling files, images and other files but html.
-- `pages`: contains the pages of your website
-- `templates`: contains the templates used inside the `pages`
+- `src/assets`: contains all the styling files, images and other files but html.
+- `src/pages`: contains the pages of your website
+- `src/templates`: contains the templates used inside the `pages`
+
+### .boxedrc
+This file contains the configuration for the project.
+By default it has the following content:
+```json
+{
+  "name": "Untitled project",     \\ name of the project
+  "folders": {
+    "pages": "src/pages",             \\ location containing the pages
+    "templates": "src/templates",     \\ location containing the templates
+    "assets": "src/assets",           \\ location containing the assets
+    "dist": "dist"                \\ export directory (where your compiled website will be)
+  }
+}
+```
+Feel free to customise it to suit your project structure better.
+
 
 ### How to use the templates in a page
 Whenever you want to use one of the `templates` in one of the `pages` you can require them like the following:
