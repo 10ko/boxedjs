@@ -1,0 +1,9 @@
+{
+  "name": "New project",
+  "folders": {
+    "pages": "pages",
+    "templates": "templates",
+    "assets": "assets",
+    "dist": "dist"
+  }
+}
