@@ -5,6 +5,7 @@ const program = require('commander');
 const boxed = require('./lib/boxed');
 const {isFileValidForWatch} = require('./lib/utils');
 const packagejson = require('./package.json');
+const boxedrc = require('rcfile')('boxed');
 
 
 program
@@ -14,7 +15,6 @@ program
   .option('-n, --new <name>', 'Create new project')
   .parse(process.argv);
 
-
 if (program.new) {
   boxed.createNewProject(program.new);
   process.exit(0);
@@ -23,8 +23,8 @@ if (program.new) {
 if (program.watch) {
   watch('.', {recursive: true, filter: isFileValidForWatch}, (evt, name) => {
     console.log('%s changed.', name);
-    boxed.compile();
+    boxed.compile(boxedrc);
   });
 } else {
-  boxed.compile();
+  boxed.compile(boxedrc);
 }
