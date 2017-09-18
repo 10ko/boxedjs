@@ -33,7 +33,9 @@
   "dependencies": {
     "commander": "^2.11.0",
     "fs-extra": "^4.0.1",
-    "node-watch": "^0.5.5"
+    "lodash": "^4.17.4",
+    "node-watch": "^0.5.5",
+    "rcfile": "^1.0.3"
   },
   "devDependencies": {
     "eslint": "^4.7.0",
