@@ -2,6 +2,7 @@
   "name": "Untitled project",
   "folders": {
     "pages": "src/pages",
+    "fragments": "src/fragments",
     "templates": "src/templates",
     "assets": "src/assets",
     "dist": "dist"
