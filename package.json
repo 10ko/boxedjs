@@ -33,6 +33,7 @@
   "dependencies": {
     "commander": "^2.11.0",
     "fs-extra": "^4.0.1",
+    "klaw-sync": "^3.0.0",
     "lodash": "^4.17.4",
     "node-watch": "^0.5.5",
     "rcfile": "^1.0.3"
