@@ -6,6 +6,6 @@
     "mocha": true
   },
   "rules": {
-    max-len: ["error", { "ignoreStrings": true }]
+    max-len: 0
   }
 }

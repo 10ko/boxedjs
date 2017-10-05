@@ -33,14 +33,19 @@
   "dependencies": {
     "commander": "^2.11.0",
     "fs-extra": "^4.0.1",
+    "js-yaml": "^3.10.0",
+    "klaw-sync": "^3.0.0",
     "lodash": "^4.17.4",
     "node-watch": "^0.5.5",
     "rcfile": "^1.0.3"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "eslint": "^4.7.0",
     "eslint-config-google": "^0.9.1",
     "eslint-watch": "^3.1.2",
-    "mocha": "^3.5.3"
+    "mocha": "^3.5.3",
+    "sinon": "^4.0.1",
+    "sinon-chai": "^2.14.0"
   }
 }
