@@ -8,8 +8,8 @@
   },
   "scripts": {
     "compile": "node index.js",
-    "lint": "esw -w **/*.js index.js --ignore-pattern node_modules/",
-    "test": "mocha lib/**/*.test.js --reporter spec"
+    "lint": "standard",
+    "test": "standard && mocha lib/**/*.test.js --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -41,11 +41,14 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "eslint": "^4.7.0",
-    "eslint-config-google": "^0.9.1",
-    "eslint-watch": "^3.1.2",
     "mocha": "^3.5.3",
     "sinon": "^4.0.1",
-    "sinon-chai": "^2.14.0"
+    "sinon-chai": "^2.14.0",
+    "standard": "^10.0.3"
+  },
+  "standard": {
+    "env": {
+      "mocha": true
+    }
   }
 }
