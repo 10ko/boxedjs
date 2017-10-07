@@ -1,4 +1,5 @@
-# boxedjs
+<img src="https://github.com/10ko/boxedjs-logo/blob/master/logo.svg" alt="boxedjs logo" width="300px" />
+
 A simple static HTML templating engine.
 
 
