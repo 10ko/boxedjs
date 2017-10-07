@@ -3,7 +3,7 @@
 const watch = require('node-watch')
 const program = require('commander')
 const boxed = require('./lib/boxed')
-const {watchFilter} = require('./lib/utils')
+const { watchFilter } = require('./lib/utils')
 const packagejson = require('./package.json')
 const boxedrc = require('rcfile')('boxed')
 
